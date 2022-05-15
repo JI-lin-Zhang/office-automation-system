@@ -9,18 +9,38 @@ export default {
       chart: null,
       options: {
         xAxis: {
-          type: "category",
-          data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          // 隐藏x轴
+          show:false,
+          type:'category'
         },
         yAxis: {
-          type: "value",
+          show:false
         },
         series: [
           {
-            data: [133, 55, 67, 218, 135, 147, 175],
+            data: [52, 88, 94, 41, 132, 63, 47, 32, 30, 80, 102, 168],
             type: "line",
+            // 拐点的样式的设置
+            itemStyle:{
+              opacity:0
+            },
+            // 线条样式
+            lineStyle:{
+              color:"skyblue"
+            },
+            // 填充颜色设置
+            // areaStyle:{
+              // color:"purple"
+            // }
           },
         ],
+        // 布局
+        grid:{
+          left:0,
+          top:0,
+          right:0,
+          bottom:0
+        }
       },
     };
   },
@@ -31,7 +51,9 @@ export default {
     },
   },
   mounted() {
-    this.initEcarts();
+    setTimeout(()=>{
+      this.initEcarts();
+    },100)
   },
 };
 </script>

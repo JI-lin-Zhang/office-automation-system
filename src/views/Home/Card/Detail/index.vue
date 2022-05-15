@@ -34,6 +34,7 @@ export default {
   padding: 10px 0px;
 }
 .card-charts{
+  width: 100%;
   font-size: 12px;
   height: 50px;
 }

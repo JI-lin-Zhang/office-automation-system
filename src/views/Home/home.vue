@@ -1,11 +1,13 @@
 <template>
   <div class="content">
     <Card/>
+    <Sale/>
   </div>
 </template>
 <script>
 import Card from "./Card/index.vue";
-export default { components: { Card } };
+import Sale from './Sale/index.vue'
+export default { components: { Card, Sale } };
 </script>
 
 <style lang="scss" scoped>
